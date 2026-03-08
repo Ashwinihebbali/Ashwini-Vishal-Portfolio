@@ -154,25 +154,9 @@ The contact form integrates with Supabase. To set up:
 
 ### Port already in use
 - Change the port in `vite.config.ts` server configuration
-
-## 📝 License
-
-This project is open source. Feel free to use it as a template for your own portfolio.
-
-## 👥 Contributors
-
-- Ashwini Hebbali
-- Vishal
+portfolio.
 
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## 📞 Support
-
-For issues or questions, please create an issue on the GitHub repository.
-
----
-
-**Last Updated**: March 7, 2026
-**Live Site**: https://Ashwinihebbali.github.io/ashwini-vishal-portfolio/
