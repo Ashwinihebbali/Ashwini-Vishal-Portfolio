@@ -45,7 +45,7 @@ A modern, responsive portfolio website built with React, TypeScript, and Vite. D
    bun install
    ```
 
-## 🏃 Development
+## 🏃Development
 
 Start the development server:
 
