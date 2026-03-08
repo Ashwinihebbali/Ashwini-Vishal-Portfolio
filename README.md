@@ -1,4 +1,4 @@
-# Ashwini & Vishal Portfolio
+# Ashwini Vishal Portfolio
 
 A modern, responsive portfolio website built with React, TypeScript, and Vite. Deployed to GitHub Pages with automated CI/CD using GitHub Actions.
 
