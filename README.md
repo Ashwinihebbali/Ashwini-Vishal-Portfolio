@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website built with React, TypeScript, and Vite. Deployed to GitHub Pages with automated CI/CD using GitHub Actions.
 
-## site is live at https://ashwinihebbali.github.io/Ashwini-Vishal-Portfolio/
+## site is live at  http://localhost:8080/Ashwini-Vishal-Portfolio/
 ## 🚀 Features
 
 - **Responsive Design**: Mobile-first approach with Tailwind CSS
