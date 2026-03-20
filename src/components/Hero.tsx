@@ -70,8 +70,8 @@ const Hero = () => {
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 animate-fade-in-up delay-400">
                 <a
-                  href={`${import.meta.env.BASE_URL}A_VI_Resume.pdf`}
-                  download="Ashwini_Vishal_Resume.pdf"
+                  href={`${import.meta.env.BASE_URL}Ashwini Vishal Hebbali.pdf`}
+                  download="Ashwini Vishal Hebbali.pdf"
                   className="inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-primary text-primary-foreground shadow-[0_0_20px_hsl(var(--primary)/0.4)] hover:shadow-[0_0_30px_hsl(var(--primary)/0.6)] hover:bg-primary/90 h-11 px-8"
                 >
                   <Download className="w-4 h-4" />
