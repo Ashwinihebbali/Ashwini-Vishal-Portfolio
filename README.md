@@ -2,7 +2,6 @@
 
 A modern, responsive portfolio website built with React, TypeScript, and Vite. Deployed to GitHub Pages with automated CI/CD using GitHub Actions.
 
-## site is live at  http://localhost:8080/Ashwini-Vishal-Portfolio/
 ## 🚀 Features
 
 - **Responsive Design**: Mobile-first approach with Tailwind CSS
@@ -26,70 +25,6 @@ A modern, responsive portfolio website built with React, TypeScript, and Vite. D
 - **Deployment**: GitHub Pages
 - **CI/CD**: GitHub Actions
 - **Linting**: ESLint
-
-## 📋 Prerequisites
-
-- Bun 1.0 or higher ([Install Bun](https://bun.sh))
-- Node.js 18+ (optional, for compatibility)
-- Git
-
-## ⚙️ Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Ashwinihebbali/Ashwini-Vishal-Portfolio.git
-   cd Ashwini-Vishal-Portfolio
-   ```
-
-2. **Install dependencies with Bun**
-   ```bash
-   bun install
-   ```
-
-## 🏃Development
-
-Start the development server:
-
-```bash
-bun run dev
-```
-
-The app will be available at `http://localhost:8080`
-
-## 🔨 Build
-
-Build for production:
-
-```bash
-bun run build
-```
-
-Preview the production build locally:
-
-```bash
-bun run preview
-```
-
-## 📝 Linting
-
-Check code quality:
-
-```bash
-bun run lint
-```
-
-## 🚢 Deployment
-
-The project is automatically deployed to GitHub Pages whenever you push to the `main` branch.
-
-**Deployment URL**: `https://Ashwinihebbali.github.io/ashwini-vishal-portfolio/`
-
-### GitHub Actions Workflow
-
-The workflow (`/.github/workflows/deploy.yml`) handles:
-- Installing dependencies with Bun
-- Building the project
-- Deploying to GitHub Pages with write permissions
 
 ## 📂 Project Structure
 
