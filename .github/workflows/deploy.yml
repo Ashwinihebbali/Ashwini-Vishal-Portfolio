@@ -36,7 +36,6 @@ jobs:
             find ./dist -name "node_modules" -type d -exec rm -rf {} + 2>/dev/null || true
             find ./dist -name ".git" -type d -exec rm -rf {} + 2>/dev/null || true
             find ./dist -name ".next" -type d -exec rm -rf {} + 2>/dev/null || true
-            find ./dist -type h -delete
           fi
 
       - name: Check artifact size
