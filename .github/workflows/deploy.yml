@@ -32,7 +32,13 @@ jobs:
       - name: Remove symlinks and problematic files
         run: |
           if [ -d "./dist" ]; then
+            # Remove all symlinks
             find ./dist -type l -delete
+            
+            # Remove files with hard links (more than 1 link)
+            find ./dist -type f -links +1 -delete
+            
+            # Remove problematic directories
             find ./dist -name "node_modules" -type d -exec rm -rf {} + 2>/dev/null || true
             find ./dist -name ".git" -type d -exec rm -rf {} + 2>/dev/null || true
             find ./dist -name ".next" -type d -exec rm -rf {} + 2>/dev/null || true
