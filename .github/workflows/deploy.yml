@@ -29,6 +29,13 @@ jobs:
       - name: Build
         run: bun run build
 
+      - name: Remove symlinks and problematic files
+        run: |
+          find ./dist -type l -delete
+          find ./dist -name "node_modules" -type d -exec rm -rf {} + 2>/dev/null || true
+          find ./dist -name ".git" -type d -exec rm -rf {} + 2>/dev/null || true
+          find ./dist -name ".next" -type d -exec rm -rf {} + 2>/dev/null || true
+
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
