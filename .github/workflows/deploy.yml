@@ -33,10 +33,9 @@ jobs:
       - name: Build
         run: bun run build
 
-      - name: Remove symlinks and hard links
+      - name: Remove symlinks
         run: |
           find ./dist -type l -delete
-          find ./dist -type h -delete
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
