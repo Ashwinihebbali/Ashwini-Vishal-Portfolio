@@ -11,6 +11,10 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -29,33 +33,18 @@ jobs:
       - name: Build
         run: bun run build
 
-      - name: Remove symlinks and problematic files
+      - name: Remove symlinks and hard links
         run: |
-          if [ -d "./dist" ]; then
-            find ./dist -type l -delete
-            find ./dist -name "node_modules" -type d -exec rm -rf {} + 2>/dev/null || true
-            find ./dist -name ".git" -type d -exec rm -rf {} + 2>/dev/null || true
-            find ./dist -name ".next" -type d -exec rm -rf {} + 2>/dev/null || true
-            find ./dist -type h -delete
-          fi
+          find ./dist -type l -delete
+          find ./dist -type h -delete
 
-      - name: Check artifact size
-        run: |
-          if [ -d "./dist" ]; then
-            echo "Artifact size:"
-            du -sh ./dist
-            echo "Detailed breakdown:"
-            du -sh ./dist/* 2>/dev/null | head -20
-          else
-            echo "dist folder not found"
-          fi
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: github-pages
           path: './dist'
-          retention-days: 1
 
       - name: Deploy to GitHub Pages
         id: deployment
